@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    @apply text-neutral-800;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .price-tag {
+    @apply font-display font-black text-brand-red leading-none;
+  }
+
+  .price-tag .cents {
+    @apply text-[0.55em] align-super;
+  }
+
+  .btn-primary {
+    @apply bg-brand-red text-white font-display font-bold px-6 py-3 rounded-lg hover:bg-brand-red-dark transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-red focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply bg-brand-blue text-white font-display font-bold px-6 py-3 rounded-lg hover:bg-brand-blue-dark transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-blue focus:ring-offset-2;
+  }
+
+  .btn-outline {
+    @apply border-2 border-brand-blue text-brand-blue font-display font-bold px-6 py-3 rounded-lg hover:bg-brand-blue hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-blue focus:ring-offset-2;
+  }
+
+  .section-heading {
+    @apply font-display font-black text-brand-blue text-3xl md:text-4xl;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-md overflow-hidden;
+  }
+
+  .special-badge {
+    @apply bg-brand-red text-white text-xs font-bold uppercase px-2 py-1 rounded-full;
+  }
+
+  .department-pill {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-full font-semibold text-sm transition-all duration-200;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  }
+
+  .gradient-blue {
+    background: linear-gradient(135deg, #1a3a8f 0%, #2451b3 100%);
+  }
+
+  .gradient-red {
+    background: linear-gradient(135deg, #d81f26 0%, #e84249 100%);
+  }
+
+  .gradient-green {
+    background: linear-gradient(135deg, #178038 0%, #22a94b 100%);
+  }
+}
